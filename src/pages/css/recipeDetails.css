@@ -1,0 +1,8 @@
+.horizontal-scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.done {
+  text-decoration: line-through;
+}
