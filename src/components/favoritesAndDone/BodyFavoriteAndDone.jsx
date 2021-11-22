@@ -45,7 +45,7 @@ export default function BodyFavoriteAndDone() {
   const favoriteButton = (index, item) => (
     <button
       type="button"
-      className="bg-transparent border-0"
+      className="bg-transparent border-0 ml-3"
       data-testid={`${index}-horizontal-favorite-btn`}
       onClick={() => handleClickFavorite(item)}
       src={favorite ? 'blackHeartIcon' : 'whiteHeartIcon'}
@@ -58,14 +58,15 @@ export default function BodyFavoriteAndDone() {
   );
   return (
     <div>
-      <div className="p-2 block md:flex">
+      <div className="p-2 px-4 block md:flex">
         {cards
           && cards.map((item, index) => {
             const foodOrDrink = item.type === 'comida' ? 'area' : 'alcoholicOrNot';
             return (
               <div
                 key={index}
-                className="flex my-2 p-2 md:p-0 border border-primary rounded-lg justify-evenly md:flex-col md:w-auto max-w-none md:mr-3"
+                className="flex my-2 p-2 md:p-0 border border-primary rounded-lg justify-evenly md:flex-col md:w-auto max-w-none md:mr-3
+                md:opacity-90 md:mb-3 ml-0 md:ml-4 shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:opacity-100"
               >
                 <Link to={`${item.type}s/${item.id}`}>
                   <div className="flex flex-row md:flex-col flex-wrap sm:w-96 md:w-72">
@@ -75,7 +76,7 @@ export default function BodyFavoriteAndDone() {
                       className="w-1/3 rounded-lg md:w-auto"
                       data-testid={`${index}-horizontal-image`}
                     />
-                    <div className="flex flex-col self-center text-center justify-self-center place-self-center">
+                    <div className="flex flex-col self-center text-center justify-self-center place-self-center mt-3">
                       <p data-testid={`${index}-horizontal-top-text`}
                         className="text-lg font-medium italic"
                       >
@@ -87,8 +88,8 @@ export default function BodyFavoriteAndDone() {
                     </div>
                   </div>
                 </Link>
-                <div className="md:text-center flex flex-col justify-center">
-                  <div className="flex justify-center items-center my-3">
+                <div className="md:text-center flex flex-col justify-center w-1/4 md:m-auto">
+                  <div className="flex justify-center items-center my-3 mr-3">
                     <button
                       type="button"
                       className="bg-transparent border-0"
