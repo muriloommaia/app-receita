@@ -17,7 +17,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <div className="h-full bg-tertiary">
-      <BrowserRouter>
+      <BrowserRouter basename="/app-receita">
         <Switch>
           <Route exact path="/" component={ Login } />
           <Route exact path="/comidas" component={ Main } />
