@@ -44,7 +44,7 @@ export default function RecipeDetails(props) {
     return (
       <div>
         <HeaderDetails />
-        <div className="instructions">
+        <div className="instructions bg-gray-50 rounded-t-3xl">
           {/* <Instructions stepProgress="ingredient-step" progress /> */}
           <InstructionsInProgress />
         </div>

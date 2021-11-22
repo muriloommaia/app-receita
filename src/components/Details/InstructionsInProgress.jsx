@@ -42,6 +42,7 @@ export default function InstructionsInProgress() {
     dispatch(changeCheck(allChecks));
     saveLocalStorage();
   };
+  console.log('se apareceu deu ruim')
 
   useEffect(() => {
     const inProgressRecipes = JSON.parse(localStorage.getItem('inProgressRecipes'));
@@ -61,24 +62,31 @@ export default function InstructionsInProgress() {
     saveLocalStorage();
   }, []);
   return (
-    <section>
-      <div className="all-ingredients">
-        { ingredients.map((ingredient, index) => (
-          <div key={ index } className="d-flex">
+    <section className="px-4  pt-4 rounded-3xl">
+      <div className="w-full flex justify-center">
+        <div className=" w-14 border-t-4 border-gray-500" />
+      </div>
+      <div className="all-ingredients mt-8">
+        <p className="font-bold text-lg mb-2"> Ingredients </p>
+        {ingredients.map((ingredient, index) => (
+          <div key={index} className="">
             <label
-              htmlFor={ index }
-              className="ingredient"
-              data-testid={ `${index}-ingredient-step` }
-              onChange={ handleChangeProgress }
+              htmlFor={index}
+              className="ingredient ingredients text-lg md:text-xl subpixel-antialiased text-gray-800 cursor-pointer"
+              data-testid={`${index}-ingredient-step`}
+              onChange={handleChangeProgress}
             >
-              <input type="checkbox" id={ index } />
+              <input type="checkbox" id={index} className="mr-2" />
               {`${ingredient} - ${measures[index]}`}
             </label>
           </div>
         ))}
       </div>
-      <div>
-        <p data-testid="instructions">{ strInstructions }</p>
+      <div className="my-2 mt-5 pb-12">
+        <p className="font-bold mb-2 text-lg"> Instructions </p>
+        <p data-testid="instructions "
+          className="text-justify text-gray-700 md:text-xl"
+        >{strInstructions}</p>
       </div>
     </section>
   );

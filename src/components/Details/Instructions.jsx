@@ -57,7 +57,7 @@ export default function Instructions({ stepProgress, progress }) {
       <div className="all-ingredients mt-8">
       <p className="font-bold text-lg mb-2"> Ingredients </p>
         {ingredients.map((ingredient, index) => (
-          <div key={index} className="d-flex">
+          <div key={index} className="">
             {
               forNormalRecipe(ingredient, index)}
           </div>

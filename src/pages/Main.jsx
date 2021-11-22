@@ -35,12 +35,12 @@ export default function Main() {
   }, [dispatch, pathname]);
 
   return (
-    <div className="flex-column">
-      <div className="d-flex flex-column">
+    <div className="">
+      <div className="">
         <Header title={ title } />
         <Categories />
       </div>
-      <div className="d-flex flex-wrap">
+      <div className="h-screen">
         <MainCards />
       </div>
       <div>

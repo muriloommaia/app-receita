@@ -31,8 +31,8 @@ export default function Login() {
 
   if (isLogged) return <Redirect to="/comidas" />;
   return (
-    <div className="h-screen flex align-middle">
-      <div className="px-12 w-full md:px-8 sm:w-1/2 flex items-center ">
+    <div className="h-screen flex flex-col-reverse justify-center md:flex-row align-middle pb-20">
+      <div className="px-12 w-full md:px-8 md:w-1/2 flex items-center justify-around">
         <StyleForm>
           <InputGen
             config={['text', 'email', 'email-input', email, false,
@@ -55,6 +55,11 @@ export default function Login() {
             </button>
           </div>
         </StyleForm>
+      </div>
+      <div className="flex flex-col font-sans md:font-serif md:self-center items-center md:w-1/2 mb-5">
+        <p className="text-5xl md:text-6xl">App de Receitas</p>
+        <div className=" border border-gray-900 w-1/2 mt-4 mb-2" />
+        <p className="text-xl md:text-3xl italic">Descubra um novo mundo</p>
       </div>
     </div>
   );

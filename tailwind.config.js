@@ -40,6 +40,7 @@ module.exports = {
       opacity: ['disabled'],
       backgroundColor: ['checked'],
       borderColor: ['checked'],
+      blur: ['hover', 'focus'],
     }
   },
   plugins: [],
