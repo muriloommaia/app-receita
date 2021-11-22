@@ -18,6 +18,11 @@ export default function BodyFavoriteAndDone() {
   const [cards, setCards] = React.useState([]);
   const { pathname } = window.location;
   const keyName = setKeyName(pathname);
+  if (clipboard) {
+    setTimeout(() => {
+      setClipboard(false);
+    }, 1000);
+  }
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem(keyName));
     if (filter === 'all') {
@@ -41,62 +46,72 @@ export default function BodyFavoriteAndDone() {
     <button
       type="button"
       className="bg-transparent border-0"
-      data-testid={ `${index}-horizontal-favorite-btn` }
-      onClick={ () => handleClickFavorite(item) }
-      src={ favorite ? 'blackHeartIcon' : 'whiteHeartIcon' }
+      data-testid={`${index}-horizontal-favorite-btn`}
+      onClick={() => handleClickFavorite(item)}
+      src={favorite ? 'blackHeartIcon' : 'whiteHeartIcon'}
     >
       <img
-        src={ favorite ? blackHeartIcon : whiteHeartIcon }
+        src={favorite ? blackHeartIcon : whiteHeartIcon}
         alt="favorite icon"
       />
     </button>
   );
   return (
     <div>
-      <div>
-        { cards
-        && cards.map((item, index) => {
-          const foodOrDrink = item.type === 'comida' ? 'area' : 'alcoholicOrNot';
-          return (
-            <div
-              key={ index }
-            >
-              <Link to={ `${item.type}s/${item.id}` }>
-                <img
-                  src={ item.image }
-                  alt={ item.id }
-                  className="w-25"
-                  data-testid={ `${index}-horizontal-image` }
-                />
-                <p data-testid={ `${index}-horizontal-top-text` }>
-                  {`${item[foodOrDrink]} - ${item.category}`}
-                </p>
-                <p data-testid={ `${index}-horizontal-name` }>{item.name}</p>
-              </Link>
-              <div>
-                <button
-                  type="button"
-                  className="bg-transparent border-0"
-                  id="liveToastBtn"
-                  data-testid={ `${index}-horizontal-share-btn` }
-                  onClick={ () => {
-                    navigator.clipboard.writeText(`http://localhost:3000/${item.type}s/${item.id}`);
-                    setClipboard(true);
-                  } }
-                  src={ shareIcon }
-                >
-                  <img
-                    src={ shareIcon }
-                    alt="share icon"
-                  />
-                </button>
-                { !done && favoriteButton(index, item) }
-                { clipboard && <p>Link copiado!</p> }
+      <div className="p-2 block md:flex">
+        {cards
+          && cards.map((item, index) => {
+            const foodOrDrink = item.type === 'comida' ? 'area' : 'alcoholicOrNot';
+            return (
+              <div
+                key={index}
+                className="flex my-2 p-2 border border-primary rounded-lg justify-evenly md:flex-col md:w-auto max-w-none"
+              >
+                <Link to={`${item.type}s/${item.id}`}>
+                  <div className="flex flex-row md:flex-col flex-wrap">
+                    <img
+                      src={item.image}
+                      alt={item.id}
+                      className="w-1/3"
+                      data-testid={`${index}-horizontal-image`}
+                    />
+                    <div className="flex flex-col self-center text-center justify-self-center">
+                      <p data-testid={`${index}-horizontal-top-text`}
+                        className="text-lg font-medium"
+                      >
+                        {`${item[foodOrDrink]} - ${item.category}`}
+                      </p>
+                      <p data-testid={`${index}-horizontal-name`}
+                      >{item.name}</p>
+                    </div>
+                  </div>
+                </Link>
+                <div>
+                  <div className="flex">
+                    <button
+                      type="button"
+                      className="bg-transparent border-0"
+                      id="liveToastBtn"
+                      data-testid={`${index}-horizontal-share-btn`}
+                      onClick={() => {
+                        navigator.clipboard.writeText(`http://localhost:3000/${item.type}s/${item.id}`);
+                        setClipboard(true);
+                      }}
+                      src={shareIcon}
+                    >
+                      <img
+                        src={shareIcon}
+                        alt="share icon"
+                      />
+                    </button>
+                    {!done && favoriteButton(index, item)}
+                  </div>
+                  {clipboard && <p>Link copiado!</p>}
+                  {done && <TagsAndDate props={{ item, index }} />}
+                </div>
               </div>
-              { done && <TagsAndDate props={ { item, index } } />}
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ function Categories() {
   }
 
   return (
-    <div className="flex flex-col asda">
+    <div className="flex flex-col asda mb-4">
       <div className="flex flex-col md:flex-row justify-center flex-grow md:my-4">
         <div className="flex justify-evenly my-2 md:my-3 md:justify-end md:w-1/2">
           {catValues.map(({ strCategory }, i) => {

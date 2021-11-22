@@ -6,7 +6,7 @@ import BodyFavoriteAndDone from '../components/favoritesAndDone/BodyFavoriteAndD
 export default function FavoriteRecipes() {
   const title = window.location.pathname.includes('favoritas') ? 'Favoritas' : 'Feitas';
   return (
-    <div>
+    <div className="h-screen">
       <Header searchRender={ false } title={ `Receitas ${title}` } />
       <ButtonsFilter />
       <BodyFavoriteAndDone />
