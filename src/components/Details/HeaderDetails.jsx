@@ -95,7 +95,7 @@ export default function HeaderDetails() {
         <div className="flex items-center">
           <button
             type="button"
-            className="bg-transparent border-0 mr-3 p-2"
+            className="bg-transparent border-0 mr-3 p-2 w-14"
             id="liveToastBtn"
             data-testid="share-btn"
             // https://stackoverflow.com/questions/39501289/in-reactjs-how-to-copy-text-to-clipboard - copy to clipboard
@@ -114,7 +114,7 @@ export default function HeaderDetails() {
           </button>
           <button
             type="button"
-            className="bg-transparent border-0"
+            className="bg-transparent border-0 w-14"
             data-testid="favorite-btn"
             onClick={ handleClickFavorite }
             src={ favorite ? 'blackHeartIcon' : 'whiteHeartIcon' }

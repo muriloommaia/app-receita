@@ -53,7 +53,7 @@ export default function Recomendations() {
           />
         </div>
       )}
-      <div className="w-full p-4 overflow-x-scroll">
+      <div className="w-full p-4">
       <p className="font-bold text-2xl mb-3">Recomendations</p>
       <div className="flex w-full overflow-x-scroll border p-3 px-4 ">
         { recomendations.map((item, index) => {
