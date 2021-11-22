@@ -86,7 +86,7 @@ export default function HeaderDetails() {
           className="w-full h-48 object-cover sm:w-96 md:w-72 md:h-auto"
         />
       </div>
-      <div className="my-2 h-full flex justify-between px-2">
+      <div className="my-2 h-full flex justify-between px-4">
         <div>
           <h2 data-testid="recipe-title" className="text-2xl border-b border-gray-900">{ recipe[ref.strTitle] }</h2>
           <h3 data-testid="recipe-category" className="text-center text-gray-800">{ recipe[ref.strCateg] }</h3>
@@ -118,7 +118,6 @@ export default function HeaderDetails() {
             data-testid="favorite-btn"
             onClick={ handleClickFavorite }
             src={ favorite ? 'blackHeartIcon' : 'whiteHeartIcon' }
-
           >
             <img
               src={ favorite ? blackHeartIcon : whiteHeartIcon }

@@ -44,36 +44,30 @@ export default function Instructions({ stepProgress, progress }) {
     saveLocalStorage();
   };
   const forNormalRecipe = (ingredient, index) => (
-    <p data-testid={ `${index}-${stepProgress}` } className="ingredients">
+    <p data-testid={`${index}-${stepProgress}`} className="ingredients text-lg subpixel-antialiased list-disc text-gray-800">
       {`${ingredient} - ${measures[index]}`}
     </p>
   );
-  const forProgressRecipe = (ingredient, index) => (
-    <div>
-      <label
-        htmlFor={ index }
-        className="ingredient"
-        data-testid={ `${index}-${stepProgress}` }
-        onChange={ handleChangeProgress }
-      >
-        <input type="checkbox" id={ index } />
-        {`${ingredient} - ${measures[index]}`}
-      </label>
-    </div>
-  );
+
   return (
-    <section>
-      <div className="all-ingredients">
-        { ingredients.map((ingredient, index) => (
-          <div key={ index } className="d-flex">
-            { progress
-              ? forProgressRecipe(ingredient, index)
-              : forNormalRecipe(ingredient, index) }
+    <section className="px-4  pt-4 rounded-3xl">
+      <div className="w-full flex justify-center">
+        <div className=" w-14 border-t-4 border-gray-500" />
+      </div>
+      <div className="all-ingredients mt-8">
+      <p className="font-bold text-lg mb-2"> Ingredients </p>
+        {ingredients.map((ingredient, index) => (
+          <div key={index} className="d-flex">
+            {
+              forNormalRecipe(ingredient, index)}
           </div>
         ))}
       </div>
-      <div>
-        <p data-testid="instructions">{ strInstructions }</p>
+      <div className="my-2 mt-5">
+        <p className="font-bold mb-2 text-lg"> Instructions </p>
+        <p data-testid="instructions "
+          className="text-justify text-gray-700"
+        >{strInstructions}</p>
       </div>
     </section>
   );

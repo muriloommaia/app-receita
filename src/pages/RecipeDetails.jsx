@@ -55,9 +55,11 @@ export default function RecipeDetails(props) {
   return (
     <div>
       <HeaderDetails />
-      <Instructions />
-      <Recomendations />
+      <div className="bg-gray-50 rounded-t-3xl">
+        <Instructions />
+        <Recomendations />
       <ButtonRecipe />
+      </div>
     </div>
   );
 }

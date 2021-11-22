@@ -9,16 +9,22 @@ module.exports = {
     autoprefixer: {}
   },
   theme: {
+    listStyleType: {
+      none: 'none',
+      square: 'square',
+      roman: 'upper-roman',
+    },
     extend: {
       transform: ['hover', 'focus'],
+      fontSmoothing: ['hover', 'focus'],
     },
     variants: {
       transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
       extend: {
       }
     },
-    colors : {
-      'primary' : '#57837B',
+    colors: {
+      'primary': '#57837B',
       'secondary': '#C9D8B6',
       'tertiary': '#F1ECC3',
       'quaternary': '#105652',
