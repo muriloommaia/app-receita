@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/app-receita/static/css/main.cb5c3cf4.chunk.css",
+    "main.js": "/app-receita/static/js/main.270c5897.chunk.js",
+    "main.js.map": "/app-receita/static/js/main.270c5897.chunk.js.map",
+    "runtime-main.js": "/app-receita/static/js/runtime-main.ab93d327.js",
+    "runtime-main.js.map": "/app-receita/static/js/runtime-main.ab93d327.js.map",
+    "static/js/2.29850af0.chunk.js": "/app-receita/static/js/2.29850af0.chunk.js",
+    "static/js/2.29850af0.chunk.js.map": "/app-receita/static/js/2.29850af0.chunk.js.map",
+    "index.html": "/app-receita/index.html",
+    "static/css/main.cb5c3cf4.chunk.css.map": "/app-receita/static/css/main.cb5c3cf4.chunk.css.map",
+    "static/js/2.29850af0.chunk.js.LICENSE.txt": "/app-receita/static/js/2.29850af0.chunk.js.LICENSE.txt",
+    "static/media/blackHeartIcon.083cb006.svg": "/app-receita/static/media/blackHeartIcon.083cb006.svg",
+    "static/media/drinkIcon.efc0d3c1.svg": "/app-receita/static/media/drinkIcon.efc0d3c1.svg",
+    "static/media/exploreIcon.07634623.svg": "/app-receita/static/media/exploreIcon.07634623.svg",
+    "static/media/mealIcon.40029e7f.svg": "/app-receita/static/media/mealIcon.40029e7f.svg",
+    "static/media/profileIcon.44eb3608.svg": "/app-receita/static/media/profileIcon.44eb3608.svg",
+    "static/media/searchIcon.7353564d.svg": "/app-receita/static/media/searchIcon.7353564d.svg",
+    "static/media/shareIcon.87def1bd.svg": "/app-receita/static/media/shareIcon.87def1bd.svg",
+    "static/media/whiteHeartIcon.2b822118.svg": "/app-receita/static/media/whiteHeartIcon.2b822118.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab93d327.js",
+    "static/js/2.29850af0.chunk.js",
+    "static/css/main.cb5c3cf4.chunk.css",
+    "static/js/main.270c5897.chunk.js"
+  ]
+}
