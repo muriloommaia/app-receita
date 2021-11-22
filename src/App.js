@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import Login from './pages/Login';
@@ -16,7 +16,7 @@ import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <div className="">
+    <div className="h-full bg-tertiary">
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={ Login } />

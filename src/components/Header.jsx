@@ -23,9 +23,9 @@ export default function Header({ searchRender, title }) {
   );
 
   return (
-    <div>
-      <div className="d-flex">
-        <div>
+    <div className="p-2 bg-secondary">
+      <div className="flex justify-between">
+        <div className="">
           <Link to="/perfil">
             <img
               src={ profileIcon }
@@ -34,13 +34,17 @@ export default function Header({ searchRender, title }) {
             />
           </Link>
         </div>
-        <div>
-          <h1 data-testid="page-title">{ title }</h1>
+        <div className="mx-2">
+          <h1 data-testid="page-title" className="text-4xl text-white">{ title }</h1>
         </div>
+        <div>
         { searchRender
         && searchButton() }
+        </div>
       </div>
+      <div className="ml-4">
       { clickSearch && <HeaderSearch />}
+      </div>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Redirect, useHistory } from 'react-router';
 
@@ -32,7 +31,7 @@ export default function MainCards() {
     value.length === 1 && !selectedCategory
       ? <Redirect push to={ `/${path}/${value[0][ref.strId]}` } />
       : (
-        <CardGroup>
+        <div className="bg-tertiary">
           { value.map((recipe, index) => {
             if (index >= MAX_SHOW_RECIPES) return null;
             return (
@@ -43,24 +42,24 @@ export default function MainCards() {
                 key={ index }
                 onClick={ () => history.push(`/${path}/${recipe[ref.strId]}`) }
               >
-                <Card style={ { width: '18rem' } }>
-                  <Card.Img
+                <div style={ { width: '18rem' } }>
+                  <img
                     variant="top"
                     src={ recipe[ref.strThumb] }
                     data-testid={ `${index}-card-img` }
                   />
-                  <Card.Body>
-                    <Card.Title
+                  <div>
+                    <h2
                       data-testid={ `${index}-card-name` }
                     >
                       { recipe[ref.strTitle] }
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
+                    </h2>
+                  </div>
+                </div>
               </button>
             );
           })}
-        </CardGroup>
+        </div>
       )
   );
 }

@@ -36,11 +36,11 @@ export default function Main() {
 
   return (
     <div className="flex-column">
-      <div className="d-flex flex-column container">
+      <div className="d-flex flex-column">
         <Header title={ title } />
         <Categories />
       </div>
-      <div className="d-flex flex-wrap container">
+      <div className="d-flex flex-wrap">
         <MainCards />
       </div>
       <div>

@@ -8,7 +8,7 @@ import '../styles/Footer.css';
 export default function Footer() {
   const history = useHistory();
   return (
-    <section className="footer" data-testid="footer">
+    <section className="footer bg-secondary" data-testid="footer">
       <button
         type="button"
         className="bg-transparent border-0"
@@ -17,6 +17,7 @@ export default function Footer() {
         <img
           src={ drinkIcon }
           data-testid="drinks-bottom-btn"
+          className='text-gray-50'
           alt="drinks-btn"
         />
       </button>

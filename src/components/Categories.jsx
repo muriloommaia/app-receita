@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { Button, ButtonGroup as div } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeSearch } from '../store/searchSlice';
 
@@ -25,47 +25,49 @@ function Categories() {
   }
 
   return (
-    <div className="d-flex flex-column">
-      <ButtonGroup name="category" size="sm" className="d-flex justify-content-evenly">
-        { catValues.map(({ strCategory }, i) => {
-          if (i <= HALF_CATEGORIES) {
+    <div className="flex flex-col asda">
+      <div className="flex flex-col md:flex-row justify-center flex-grow">
+        <div className="flex justify-evenly my-1 md:my-3 md:justify-end md:w-1/2">
+          {catValues.map(({ strCategory }, i) => {
+            if (i <= HALF_CATEGORIES) {
+              return (
+                <button
+                  data-testid={`${strCategory}-category-filter`}
+                  key={i}
+                  id="toggle-check"
+                  type="checkbox"
+                  className="border-4 w-1/4 mx-2 p-2 border-primary rounded-md hover:text-gray-50 hover:bg-primary"
+                  checked={selectedCategory === strCategory}
+                  value={strCategory}
+                  onClick={handleClick}
+                >
+                  {strCategory}
+                </button>
+              );
+            }
+            return null;
+          })}
+        </div>
+        <div name="category" size="sm" className="flex justify-evenly my-1 md:my-3 md:justify-start md:w-1/2">
+          {catValues.map(({ strCategory }, i) => {
+            if (i > MAX_CATEGORIES || i <= HALF_CATEGORIES) return null;
             return (
-              <Button
-                data-testid={ `${strCategory}-category-filter` }
-                key={ i }
+              <button
+                data-testid={`${strCategory}-category-filter`}
+                key={i}
+                className="border-4 w-1/4 mx-2 p-2 border-primary rounded-md hover:text-gray-50 hover:bg-primary"
                 id="toggle-check"
                 type="checkbox"
-                variant="outline-primary"
-                checked={ selectedCategory === strCategory }
-                value={ strCategory }
-                onClick={ handleClick }
+                checked={selectedCategory === strCategory}
+                value={strCategory}
+                onClick={handleClick}
               >
-                { strCategory }
-              </Button>
+                {strCategory}
+              </button>
             );
-          }
-          return null;
-        })}
-      </ButtonGroup>
-      <ButtonGroup name="category" size="sm">
-        { catValues.map(({ strCategory }, i) => {
-          if (i > MAX_CATEGORIES || i <= HALF_CATEGORIES) return null;
-          return (
-            <Button
-              data-testid={ `${strCategory}-category-filter` }
-              key={ i }
-              id="toggle-check"
-              type="checkbox"
-              variant="outline-primary"
-              checked={ selectedCategory === strCategory }
-              value={ strCategory }
-              onClick={ handleClick }
-            >
-              { strCategory }
-            </Button>
-          );
-        })}
-      </ButtonGroup>
+          })}
+        </div>
+      </div>
     </div>
   );
 }

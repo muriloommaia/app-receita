@@ -1,37 +1,38 @@
 {
-  "name": "recipes-app-test",
+  "name": "app-receita",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.4.0",
     "@reduxjs/toolkit": "^1.6.2",
-    "@sheerun/mutationobserver-shim": "^0.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.21.1",
-    "bootstrap": "^4.5.3",
-    "clipboard-copy": "^3.1.0",
-    "history": "^4.7.2",
-    "lodash": "^4.17.15",
-    "prop-types": "^15.7.2",
+    "n": "^8.0.0",
     "react": "^16.13.1",
-    "react-bootstrap": "^1.4.0",
+    "react-bootstrap": "^2.0.2",
     "react-dom": "^16.13.1",
     "react-logger": "^1.1.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^4.0.3",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.0",
-    "websocket-extensions": ">=0.1.4"
+    "stable": "^0.1.8",
+    "styled-components": "^5.3.3",
+    "tailwind-styled-components": "^2.0.3",
+    "twin.macro": "^2.8.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/index.js"
+    ]
   },
   "scripts": {
-    "cy": "cypress run",
-    "cy:open": "cypress open",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "test-coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
@@ -48,27 +49,9 @@
     ]
   },
   "devDependencies": {
+    "@sheerun/mutationobserver-shim": "0.3.3",
     "autoprefixer": "^9.8.8",
-    "clipboardy": "^2.1.0",
-    "fs-extra": "^9.0.1",
-    "mocha": "^8.0.1",
-    "mochawesome": "^6.1.1",
-    "mochawesome-merge": "^4.1.0",
-    "mochawesome-report-generator": "^5.1.0",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
-  },
-  "jest": {
-    "coveragePathIgnorePatterns": [
-      "index.js",
-      "serviceWorker.js"
-    ],
-    "coverageReporters": [
-      "json",
-      "lcovonly",
-      "text",
-      "clover",
-      "html"
-    ]
   }
 }
