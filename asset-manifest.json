@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.cb5c3cf4.chunk.css",
-    "main.js": "/react-gh-pages/static/js/main.e609bb77.chunk.js",
-    "main.js.map": "/react-gh-pages/static/js/main.e609bb77.chunk.js.map",
-    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.a79c6584.js",
-    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.a79c6584.js.map",
-    "static/js/2.1d6f8e47.chunk.js": "/react-gh-pages/static/js/2.1d6f8e47.chunk.js",
-    "static/js/2.1d6f8e47.chunk.js.map": "/react-gh-pages/static/js/2.1d6f8e47.chunk.js.map",
-    "index.html": "/react-gh-pages/index.html",
-    "static/css/main.cb5c3cf4.chunk.css.map": "/react-gh-pages/static/css/main.cb5c3cf4.chunk.css.map",
-    "static/js/2.1d6f8e47.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.1d6f8e47.chunk.js.LICENSE.txt",
-    "static/media/blackHeartIcon.083cb006.svg": "/react-gh-pages/static/media/blackHeartIcon.083cb006.svg",
-    "static/media/drinkIcon.efc0d3c1.svg": "/react-gh-pages/static/media/drinkIcon.efc0d3c1.svg",
-    "static/media/exploreIcon.07634623.svg": "/react-gh-pages/static/media/exploreIcon.07634623.svg",
-    "static/media/mealIcon.40029e7f.svg": "/react-gh-pages/static/media/mealIcon.40029e7f.svg",
-    "static/media/profileIcon.44eb3608.svg": "/react-gh-pages/static/media/profileIcon.44eb3608.svg",
-    "static/media/searchIcon.7353564d.svg": "/react-gh-pages/static/media/searchIcon.7353564d.svg",
-    "static/media/shareIcon.87def1bd.svg": "/react-gh-pages/static/media/shareIcon.87def1bd.svg",
-    "static/media/whiteHeartIcon.2b822118.svg": "/react-gh-pages/static/media/whiteHeartIcon.2b822118.svg"
+    "main.css": "/app-receita/static/css/main.cb5c3cf4.chunk.css",
+    "main.js": "/app-receita/static/js/main.cb284620.chunk.js",
+    "main.js.map": "/app-receita/static/js/main.cb284620.chunk.js.map",
+    "runtime-main.js": "/app-receita/static/js/runtime-main.ab93d327.js",
+    "runtime-main.js.map": "/app-receita/static/js/runtime-main.ab93d327.js.map",
+    "static/js/2.29850af0.chunk.js": "/app-receita/static/js/2.29850af0.chunk.js",
+    "static/js/2.29850af0.chunk.js.map": "/app-receita/static/js/2.29850af0.chunk.js.map",
+    "index.html": "/app-receita/index.html",
+    "static/css/main.cb5c3cf4.chunk.css.map": "/app-receita/static/css/main.cb5c3cf4.chunk.css.map",
+    "static/js/2.29850af0.chunk.js.LICENSE.txt": "/app-receita/static/js/2.29850af0.chunk.js.LICENSE.txt",
+    "static/media/blackHeartIcon.083cb006.svg": "/app-receita/static/media/blackHeartIcon.083cb006.svg",
+    "static/media/drinkIcon.efc0d3c1.svg": "/app-receita/static/media/drinkIcon.efc0d3c1.svg",
+    "static/media/exploreIcon.07634623.svg": "/app-receita/static/media/exploreIcon.07634623.svg",
+    "static/media/mealIcon.40029e7f.svg": "/app-receita/static/media/mealIcon.40029e7f.svg",
+    "static/media/profileIcon.44eb3608.svg": "/app-receita/static/media/profileIcon.44eb3608.svg",
+    "static/media/searchIcon.7353564d.svg": "/app-receita/static/media/searchIcon.7353564d.svg",
+    "static/media/shareIcon.87def1bd.svg": "/app-receita/static/media/shareIcon.87def1bd.svg",
+    "static/media/whiteHeartIcon.2b822118.svg": "/app-receita/static/media/whiteHeartIcon.2b822118.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a79c6584.js",
-    "static/js/2.1d6f8e47.chunk.js",
+    "static/js/runtime-main.ab93d327.js",
+    "static/js/2.29850af0.chunk.js",
     "static/css/main.cb5c3cf4.chunk.css",
-    "static/js/main.e609bb77.chunk.js"
+    "static/js/main.cb284620.chunk.js"
   ]
 }
