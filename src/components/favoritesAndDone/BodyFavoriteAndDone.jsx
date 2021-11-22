@@ -65,29 +65,30 @@ export default function BodyFavoriteAndDone() {
             return (
               <div
                 key={index}
-                className="flex my-2 p-2 border border-primary rounded-lg justify-evenly md:flex-col md:w-auto max-w-none"
+                className="flex my-2 p-2 md:p-0 border border-primary rounded-lg justify-evenly md:flex-col md:w-auto max-w-none md:mr-3"
               >
                 <Link to={`${item.type}s/${item.id}`}>
-                  <div className="flex flex-row md:flex-col flex-wrap">
+                  <div className="flex flex-row md:flex-col flex-wrap sm:w-96 md:w-72">
                     <img
                       src={item.image}
                       alt={item.id}
-                      className="w-1/3"
+                      className="w-1/3 rounded-lg md:w-auto"
                       data-testid={`${index}-horizontal-image`}
                     />
-                    <div className="flex flex-col self-center text-center justify-self-center">
+                    <div className="flex flex-col self-center text-center justify-self-center place-self-center">
                       <p data-testid={`${index}-horizontal-top-text`}
-                        className="text-lg font-medium"
+                        className="text-lg font-medium italic"
                       >
                         {`${item[foodOrDrink]} - ${item.category}`}
                       </p>
                       <p data-testid={`${index}-horizontal-name`}
+                      className="text-xl"
                       >{item.name}</p>
                     </div>
                   </div>
                 </Link>
-                <div>
-                  <div className="flex">
+                <div className="md:text-center flex flex-col justify-center">
+                  <div className="flex justify-center items-center my-3">
                     <button
                       type="button"
                       className="bg-transparent border-0"
