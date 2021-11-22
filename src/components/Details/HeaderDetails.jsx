@@ -86,7 +86,7 @@ export default function HeaderDetails() {
           className="w-full h-48 object-cover md:w-96 md:h-auto"
         />
       </div>
-      <div className="my-2 h-full flex justify-between px-4 sm:items-center sm:pr-44">
+      <div className="my-2 h-full flex justify-between px-4 sm:items-center sm:pr-36">
         <div className="">
           <h2 data-testid="recipe-title" className="text-2xl border-b border-gray-900 md:text-7xl font-sans md:font-serif">{ recipe[ref.strTitle] }</h2>
           <h3 data-testid="recipe-category" className="text-center text-gray-800 font-sans md:font-serif md:text-5xl">{ recipe[ref.strCateg] }</h3>
