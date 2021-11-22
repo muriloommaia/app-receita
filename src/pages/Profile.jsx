@@ -5,7 +5,7 @@ import Header from '../components/Header';
 
 export default function Profile() {
   return (
-    <div>
+    <div className="h-screen">
       <div>
         <Header searchRender={ false } title="Perfil" />
       </div>

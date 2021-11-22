@@ -35,12 +35,12 @@ export default function ButtonRecipe({ testBtn }) {
   if (isOpen) return <Redirect to={ `${pathname}/in-progress` } />;
   if (pathname.includes('in-progress')) {
     return (
-      <div>
+      <div className="disabled:opacity-50">
         <button
           type="button"
           disabled={ !allCheck }
           data-testid={ `${testBtn}-recipe-btn` }
-          className="fixed-bottom"
+          className="fixed bottom-0 p-3 border bg-primary text-gray-50 left-1/2 disabled:opacity-80 disabled:bg-red-400"
           onClick={ () => handleClick(setIsOpen, isOpen, allCheck) }
         >
           {`${allCheck ? 'Finalizar' : text} Receita`}
@@ -53,7 +53,7 @@ export default function ButtonRecipe({ testBtn }) {
       <button
         type="button"
         data-testid={ `${testBtn}-recipe-btn` }
-        className="fixed-bottom"
+        className="fixed bottom-0 p-3 border bg-primary text-gray-50 left-1/2 disabled:opacity-50"
         onClick={ () => handleClick(setIsOpen, isOpen, allCheck) }
       >
         {`${text} Receita`}

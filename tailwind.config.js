@@ -3,12 +3,19 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
+  plugins: {
+    tailwindcss: {},
+    'postcss-focus-visible': {},
+    autoprefixer: {}
+  },
   theme: {
     extend: {
       transform: ['hover', 'focus'],
     },
     variants: {
-      transitionProperty: ['responsive', 'motion-safe', 'motion-reduce']
+      transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
+      extend: {
+      }
     },
     colors : {
       'primary' : '#57837B',
@@ -18,11 +25,15 @@ module.exports = {
       gray: colors.gray,
       'card': '#F6EEDF',
       yellow: colors.yellow,
+      red: colors.red,
     }
   },
   variants: {
     extend: {
       maxHeight: ['focus'],
+      opacity: ['disabled'],
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
     }
   },
   plugins: [],
