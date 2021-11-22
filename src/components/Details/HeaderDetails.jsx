@@ -51,6 +51,11 @@ export default function HeaderDetails() {
 
     actualRecipeObj = { ...localStorageObj, tags: setTags(recipe.strTags) };
   }
+  if(clipboard) {
+    setTimeout(() => {
+      setClipboard(false);
+    }, 1000);
+  }
   useEffect(() => {
     const isFavorite = JSON.parse(localStorage.getItem('favoriteRecipes'))
       .some((item) => item.id === recipe.idMeal || item.id === recipe.idDrink);
@@ -72,24 +77,25 @@ export default function HeaderDetails() {
     }
   };
   return (
-    <section>
-      <div>
+    <section className="block md:flex">
+      <div className="">
         <img
           src={ recipe[ref.strThumb] }
           alt="test"
           data-testid="recipe-photo"
-          className="w-50"
+          className="w-full h-48 object-cover sm:w-96 md:w-72 md:h-auto"
         />
       </div>
-      <div className="d-flex">
+      <div className="my-2 h-full flex justify-between px-2">
         <div>
-          <h2 data-testid="recipe-title">{ recipe[ref.strTitle] }</h2>
-          <h3 data-testid="recipe-category">{ recipe[ref.strCateg] }</h3>
+          <h2 data-testid="recipe-title" className="text-2xl border-b border-gray-900">{ recipe[ref.strTitle] }</h2>
+          <h3 data-testid="recipe-category" className="text-center text-gray-800">{ recipe[ref.strCateg] }</h3>
         </div>
         <div>
+        <div className="flex items-center">
           <button
             type="button"
-            className="bg-transparent border-0"
+            className="bg-transparent border-0 mr-3 p-2"
             id="liveToastBtn"
             data-testid="share-btn"
             // https://stackoverflow.com/questions/39501289/in-reactjs-how-to-copy-text-to-clipboard - copy to clipboard
@@ -119,8 +125,9 @@ export default function HeaderDetails() {
               alt="favorite icon"
             />
           </button>
-          { clipboard && <p>Link copiado!</p> }
         </div>
+          <p className={`${clipboard ? 'visible' : 'hidden'} transform  duration-1000 transition-all opacity-90 ease-in-out`}>Link copiado!</p>
+          </div>
       </div>
     </section>
   );
