@@ -46,6 +46,7 @@ function App() {
           <Route path component={ NotFound } />
         </Switch>
       </BrowserRouter>
+      <div className="h-16" />
     </div>
   );
 }

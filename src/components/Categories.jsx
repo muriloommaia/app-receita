@@ -26,7 +26,7 @@ function Categories() {
 
   return (
     <div className="flex flex-col asda">
-      <div className="flex flex-col md:flex-row justify-center flex-grow">
+      <div className="flex flex-col md:flex-row justify-center flex-grow md:my-4">
         <div className="flex justify-evenly my-1 md:my-3 md:justify-end md:w-1/2">
           {catValues.map(({ strCategory }, i) => {
             if (i <= HALF_CATEGORIES) {
@@ -36,7 +36,7 @@ function Categories() {
                   key={i}
                   id="toggle-check"
                   type="checkbox"
-                  className="border-4 w-1/4 mx-2 p-2 border-primary rounded-md hover:text-gray-50 hover:bg-primary"
+                  className="border-4 w-1/4 mx-2 p-2 border-primary rounded-md hover:text-gray-50 hover:bg-primary transition duration-300 ease-in-out transform"
                   checked={selectedCategory === strCategory}
                   value={strCategory}
                   onClick={handleClick}
@@ -55,7 +55,7 @@ function Categories() {
               <button
                 data-testid={`${strCategory}-category-filter`}
                 key={i}
-                className="border-4 w-1/4 mx-2 p-2 border-primary rounded-md hover:text-gray-50 hover:bg-primary"
+                className="border-4 w-1/4 mx-2 p-2 border-primary rounded-md hover:text-gray-50 hover:bg-primary transition duration-300 ease-in-out transform"
                 id="toggle-check"
                 type="checkbox"
                 checked={selectedCategory === strCategory}

@@ -31,26 +31,28 @@ export default function MainCards() {
     value.length === 1 && !selectedCategory
       ? <Redirect push to={ `/${path}/${value[0][ref.strId]}` } />
       : (
-        <div className="bg-tertiary">
+        <div className="bg-tertiary flex flex-wrap justify-center px-1 md:px-3 md:justify-around transform hover:scale-100 transition duration-500 ease-in-out">
           { value.map((recipe, index) => {
             if (index >= MAX_SHOW_RECIPES) return null;
             return (
               <button
                 type="button"
-                className="invisible-btn"
+                className="border border-quaternary mb-2 md:mb-3 ml-0 md:ml-4 shadow-xl rounded-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
                 data-testid={ `${index}-recipe-card` }
                 key={ index }
                 onClick={ () => history.push(`/${path}/${recipe[ref.strId]}`) }
               >
-                <div style={ { width: '18rem' } }>
+                <div className=" w-80 sm:w-96 md:w-72">
                   <img
                     variant="top"
                     src={ recipe[ref.strThumb] }
+                    className='rounded-md'
                     data-testid={ `${index}-card-img` }
                   />
-                  <div>
+                  <div className="py-4">
                     <h2
                       data-testid={ `${index}-card-name` }
+                      className=" font-sans md:font-serif text-2xl"
                     >
                       { recipe[ref.strTitle] }
                     </h2>
