@@ -37,7 +37,7 @@ export default function MainCards() {
             return (
               <button
                 type="button"
-                className="border border-quaternary opacity-90 blur-3xl mb-2 md:mb-3 ml-0 md:ml-4 shadow-xl rounded-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:opacity-100 md:blur-none"
+                className="border border-quaternary opacity-90 blur-3xl mt-2 md:mb-3 ml-0 md:ml-4 shadow-xl rounded-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:opacity-100 md:blur-none"
                 data-testid={ `${index}-recipe-card` }
                 key={ index }
                 onClick={ () => history.push(`/${path}/${recipe[ref.strId]}`) }

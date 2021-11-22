@@ -17,7 +17,7 @@ export default function Login() {
     localStorage.setItem('cocktailsToken', 1);
     const user = { email };
     localStorage.setItem('user', JSON.stringify(user));
-    dispatch(changeUser({ email, password }));
+    dispatch(changeUser({ email, password, isLogged: true }));
   };
 
   const verify = () => {

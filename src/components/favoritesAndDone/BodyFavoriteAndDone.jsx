@@ -58,7 +58,7 @@ export default function BodyFavoriteAndDone() {
   );
   return (
     <div>
-      <div className="p-2 px-4 block md:flex">
+      <div className="p-2 px-4 block md:flex md:flex-wrap">
         {cards
           && cards.map((item, index) => {
             const foodOrDrink = item.type === 'comida' ? 'area' : 'alcoholicOrNot';

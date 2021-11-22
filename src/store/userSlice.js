@@ -8,8 +8,8 @@ export const slice = createSlice({
     password: '',
   },
   reducers: {
-    changeUser(state, { payload: { email, password } }) {
-      return { ...state, isLogged: true, email, password };
+    changeUser(state, { payload: { email, password, isLogged } }) {
+      return { ...state, isLogged, email, password };
     },
   },
 });
