@@ -42,19 +42,19 @@ export default function Recomendations() {
     <div className="pb-7">
       { strYoutube && (
         <div className="mb-7 flex flex-col">
-          <h1 className="font-bold text-lg px-4">Vídeo</h1>
+          <h1 className="font-bold text-2xl px-4">Vídeo</h1>
           <iframe
             src={ `https://www.youtube.com/embed/${idYoutube}` }
             title="video"
             frameBorder="0"
             allowFullScreen
             data-testid="video"
-            className="justify-self-center md:w-1/2"
+            className="justify-self-center md:w-3/4 md:h-96 md:self-center"
           />
         </div>
       )}
-      <div className="w-full">
-      <p className="font-bold text-lg mb-3">Recomendations</p>
+      <div className="w-full p-4 overflow-x-scroll">
+      <p className="font-bold text-2xl mb-3">Recomendations</p>
       <div className="flex w-full overflow-x-scroll border p-3 px-4 ">
         { recomendations.map((item, index) => {
           const MAX_CARDS = 5;

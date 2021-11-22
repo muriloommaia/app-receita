@@ -77,19 +77,19 @@ export default function HeaderDetails() {
     }
   };
   return (
-    <section className="block md:flex">
+    <section className="block md:flex md:items-center md:justify-between md:mb-4">
       <div className="">
         <img
           src={ recipe[ref.strThumb] }
           alt="test"
           data-testid="recipe-photo"
-          className="w-full h-48 object-cover sm:w-96 md:w-72 md:h-auto"
+          className="w-full h-48 object-cover md:w-96 md:h-auto"
         />
       </div>
-      <div className="my-2 h-full flex justify-between px-4">
-        <div>
-          <h2 data-testid="recipe-title" className="text-2xl border-b border-gray-900">{ recipe[ref.strTitle] }</h2>
-          <h3 data-testid="recipe-category" className="text-center text-gray-800">{ recipe[ref.strCateg] }</h3>
+      <div className="my-2 h-full flex justify-between px-4 sm:items-center sm:pr-44">
+        <div className="">
+          <h2 data-testid="recipe-title" className="text-2xl border-b border-gray-900 md:text-7xl font-sans md:font-serif">{ recipe[ref.strTitle] }</h2>
+          <h3 data-testid="recipe-category" className="text-center text-gray-800 font-sans md:font-serif md:text-5xl">{ recipe[ref.strCateg] }</h3>
         </div>
         <div>
         <div className="flex items-center">
