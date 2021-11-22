@@ -31,8 +31,8 @@ export default function Login() {
 
   if (isLogged) return <Redirect to="/comidas" />;
   return (
-    <div className="">
-      <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+    <div className="h-screen flex align-middle">
+      <div className="px-12 w-full md:px-8 sm:w-1/2 flex items-center ">
         <StyleForm>
           <InputGen
             config={['text', 'email', 'email-input', email, false,

@@ -13,6 +13,7 @@ export default function InputGen({ config }) {
           type={ type }
           name={ name }
           data-testid={ dataTestId }
+          id={ dataTestId }
           value={ value }
           onChange={ onChange }
           className={ className }

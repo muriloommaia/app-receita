@@ -2,7 +2,7 @@ import styled from "styled-components"
 import tw from "twin.macro"
 
 const StyleForm = styled.div.attrs({
-  className: "",
+  className: " flex flex-col content-center",
 })`
   & {
     span {

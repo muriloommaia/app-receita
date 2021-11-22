@@ -24,7 +24,7 @@ export default function Header({ searchRender, title }) {
 
   return (
     <div className="p-2 bg-secondary">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <div className="">
           <Link to="/perfil">
             <img
@@ -42,7 +42,7 @@ export default function Header({ searchRender, title }) {
         && searchButton() }
         </div>
       </div>
-      <div className="ml-4">
+      <div className="">
       { clickSearch && <HeaderSearch />}
       </div>
     </div>
