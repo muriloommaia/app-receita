@@ -35,12 +35,12 @@ export default function Main() {
   }, [dispatch, pathname]);
 
   return (
-    <div className="">
+    <div className="h-full">
       <div className="">
         <Header title={ title } />
         <Categories />
       </div>
-      <div className="h-screen">
+      <div className="">
         <MainCards />
       </div>
       <div>

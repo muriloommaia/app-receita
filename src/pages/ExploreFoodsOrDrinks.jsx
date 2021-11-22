@@ -20,17 +20,18 @@ export default function ExploreFoodsOrDrinks() {
     const redirectId = Object.values(recipe)[0][0][ref.strId];
     history.push(`/${ref.url}/${redirectId}`);
   }
-
+  const className = 'border-2 w-60 mx-2 p-2 mt-3 border-primary rounded-md hover:text-gray-50 hover:bg-primary transition duration-300 ease-in-out transform  focus:bg-primary focus:text-gray-50 md:w-72'
   return (
-    <div>
+    <div className="h-screen">
       <div>
         <Header searchRender={ false } title={ ref.title } />
       </div>
-      <div>
+      <div className="flex flex-col justify-center items-center h-96">
         <Link to={ `${pathname}/ingredientes` }>
           <button
             type="button"
             data-testid="explore-by-ingredient"
+            className={className}
           >
             Por Ingredientes
 
@@ -40,6 +41,8 @@ export default function ExploreFoodsOrDrinks() {
           <Link to={ `${pathname}/area` }>
             <button
               type="button"
+              className={className}
+
               data-testid="explore-by-area"
             >
               Por Local de Origem
@@ -50,6 +53,8 @@ export default function ExploreFoodsOrDrinks() {
           type="button"
           data-testid="explore-surprise"
           onClick={ handleClick }
+          className={className}
+
         >
           Me Surpreenda!
         </button>

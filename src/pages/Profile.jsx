@@ -11,12 +11,14 @@ export default function Profile() {
         <Header searchRender={false} title="Perfil" />
       </div>
       <section className="mt-4">
-        <h3 data-testid="profile-email">
+        <div className="flex flex-col justify-center items-center h-96">
+        <h3 data-testid="profile-email"
+          className="text-center my-3 text-3xl italic"
+        >
           {localStorage.getItem('user')
             && JSON.parse(localStorage.getItem('user')).email}
 
         </h3>
-        <div className="flex flex-col justify-center items-center h-96">
           <Link to="/receitas-feitas">
             <button
               type="button"

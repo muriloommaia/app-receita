@@ -76,7 +76,7 @@ export default function BodyFavoriteAndDone() {
                       className="w-1/3 rounded-lg md:w-auto"
                       data-testid={`${index}-horizontal-image`}
                     />
-                    <div className="flex flex-col self-center text-center justify-self-center place-self-center mt-3">
+                    <div className="flex flex-col self-center text-center justify-self-center place-self-center mt-3 mx-auto">
                       <p data-testid={`${index}-horizontal-top-text`}
                         className="text-lg font-medium italic"
                       >
@@ -88,7 +88,7 @@ export default function BodyFavoriteAndDone() {
                     </div>
                   </div>
                 </Link>
-                <div className="md:text-center flex flex-col justify-center w-1/4 md:m-auto">
+                <div className="md:text-center flex flex-col justify-center w-1/4 md:m-auto md:pb-2">
                   <div className="flex justify-center items-center my-3 mr-3">
                     <button
                       type="button"
