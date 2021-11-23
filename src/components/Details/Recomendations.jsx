@@ -13,13 +13,12 @@ export default function Recomendations() {
   let path = window.location.pathname.split('/')[1];
   let strTitle = null;
   let strThumb = null;
-  if (path === 'comidas') {
+  if (path.includes('comida')) {
     strTitle = 'strDrink';
     strThumb = 'strDrinkThumb';
     path = '/bebidas';
     key = 'drinks';
-  }
-  if (path === 'bebidas') {
+  } else {
     strTitle = 'strMeal';
     strThumb = 'strMealThumb';
     path = '/comidas';

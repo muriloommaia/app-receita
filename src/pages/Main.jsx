@@ -13,19 +13,21 @@ export default function Main() {
   const dispatch = useDispatch();
   const search = useSelector((state) => state.search);
   const { pathname } = window.location;
-  const title = pathname === '/comidas' ? 'Comidas' : 'Bebidas';
+  const title = pathname.includes('comida') ? 'Comidas' : 'Bebidas';
 
   useEffect(() => {
     async function fetchData(end, path) {
       const data = await fetchApi(end, path);
       dispatch(changeData(data));
     }
+    console.log(pathname)
     fetchData(search, pathname);
   }, [search, dispatch, pathname]);
 
   useEffect(() => {
     async function fetchData(end, path) {
       const data = await fetchApi(end, path);
+      console.log(data)
       dispatch(changeCategories(data));
     }
     fetchData({

@@ -9,17 +9,19 @@ export default function MainCards() {
   const selectedCategory = useSelector((state) => state.search.category.search);
   const history = useHistory();
   const MAX_SHOW_RECIPES = 12;
-
+  console.log(data)
   if (!data) return <p>loading</p>;
 
   const value = Object.values(data)[0];
-  const path = window.location.pathname.split('/')[1];
+  let path = window.location.pathname;
   let ref = null;
 
-  if (path === 'comidas') {
+  if (path.includes('comida')) {
     ref = { strTitle: 'strMeal', strThumb: 'strMealThumb', strId: 'idMeal' };
+    path = 'comidas';
   } else {
     ref = { strTitle: 'strDrink', strThumb: 'strDrinkThumb', strId: 'idDrink' };
+    path = 'bebidas';
   }
 
   if (!value) {

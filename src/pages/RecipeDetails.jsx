@@ -23,6 +23,7 @@ export default function RecipeDetails(props) {
       const response = await fetchApi(
         { type: 'details', details: { search: id } }, pathname,
       );
+      console.log(response)
       if (response) {
         dispatch(changeDetail(response));
         setIsFetching(true);

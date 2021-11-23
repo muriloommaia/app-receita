@@ -22,12 +22,12 @@ export default function HeaderDetails() {
   const { detail } = useSelector((state) => state);
   const key = Object.keys(detail)[0];
   const recipe = detail[key][0];
-  const path = window.location.pathname.split('/')[1];
+  const path = window.location.pathname;
   let ref = null;
   let localStorageObj = null;
   let actualRecipeObj = null;
   const { pathname } = window.location;
-  if (path === 'comidas') {
+  if (path.includes('comida')) {
     ref = { strTitle: 'strMeal', strThumb: 'strMealThumb', strCateg: 'strCategory' };
 
     localStorageObj = { id: recipe.idMeal,
@@ -38,8 +38,7 @@ export default function HeaderDetails() {
       name: recipe.strMeal,
       image: recipe.strMealThumb };
     actualRecipeObj = { ...localStorageObj, tags: setTags(recipe.strTags) };
-  }
-  if (path === 'bebidas') {
+  } else {
     ref = { strTitle: 'strDrink', strThumb: 'strDrinkThumb', strCateg: 'strAlcoholic' };
     localStorageObj = { id: recipe.idDrink,
       type: 'bebida',

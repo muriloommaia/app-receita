@@ -20,19 +20,20 @@ export default function ButtonRecipe({ testBtn }) {
   const [text, setText] = React.useState('Iniciar');
   const { allCheck } = useSelector((state) => state.allChecked);
   const { pathname } = window.location;
+  const path = pathname.split('/').slice(pathname.split('/').length - 2).join('/');
   useEffect(() => {
     dispatch(changeCheck(false));
     const inProgressRecipes = JSON.parse(localStorage.getItem('inProgressRecipes'));
     const keyName = pathname.includes('comidas') ? 'meals' : 'cocktails';
-    const ingredientsSaved = inProgressRecipes[keyName][pathname.split('/')[2]];
+    const ingredientsSaved = inProgressRecipes[keyName][pathname.split('/')[3]];
+    console.log(pathname.split('/')[3]);
     if (ingredientsSaved) {
       setText('Continuar');
     }
     setIsOpen(false);
   }, [pathname, dispatch]);
-
   if (isOpen && allCheck) return <Redirect to="/receitas-feitas" />;
-  if (isOpen) return <Redirect to={ `${pathname}/in-progress` } />;
+  if (isOpen) return <Redirect to={ `/${path}/in-progress` } />;
   if (pathname.includes('in-progress')) {
     return (
       <div className="disabled:opacity-50">

@@ -30,7 +30,7 @@ export default function InstructionsInProgress() {
     const labels = document.querySelector('.instructions');
     localStorageObj[keyName] = {
       ...localStorageObj[keyName],
-      [pathname.split('/')[2]]: labels.innerHTML,
+      [pathname.split('/')[3]]: labels.innerHTML,
     };
     localStorage.setItem('inProgressRecipes', JSON.stringify(localStorageObj));
   };
@@ -42,12 +42,11 @@ export default function InstructionsInProgress() {
     dispatch(changeCheck(allChecks));
     saveLocalStorage();
   };
-  console.log('se apareceu deu ruim')
 
   useEffect(() => {
     const inProgressRecipes = JSON.parse(localStorage.getItem('inProgressRecipes'));
     const keyName = pathname.includes('comidas') ? 'meals' : 'cocktails';
-    const ingredientsSaved = inProgressRecipes[keyName][pathname.split('/')[2]];
+    const ingredientsSaved = inProgressRecipes[keyName][pathname.split('/')[3]];
     if (ingredientsSaved) {
       const parent = document.querySelector('.instructions');
       parent.innerHTML = ingredientsSaved;
