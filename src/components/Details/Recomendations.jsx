@@ -10,7 +10,7 @@ export default function Recomendations() {
   const recipe = detail[key][0];
   const { strYoutube } = recipe;
   const idYoutube = strYoutube ? strYoutube.split('v=')[1] : null;
-  let path = window.location.pathname.split('/')[1];
+  let path = window.location.pathname;
   let strTitle = null;
   let strThumb = null;
   if (path.includes('comida')) {

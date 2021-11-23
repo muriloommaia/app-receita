@@ -45,7 +45,7 @@ export default function BodyFavoriteAndDone() {
   const favoriteButton = (index, item) => (
     <button
       type="button"
-      className="bg-transparent border-0 ml-3"
+      className="bg-transparent border-0 mt-3 ml-3 md:mt-0"
       data-testid={`${index}-horizontal-favorite-btn`}
       onClick={() => handleClickFavorite(item)}
       src={favorite ? 'blackHeartIcon' : 'whiteHeartIcon'}
@@ -69,7 +69,7 @@ export default function BodyFavoriteAndDone() {
                 md:opacity-90 md:mb-3 ml-0 md:ml-4 shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:opacity-100"
               >
                 <Link to={`${item.type}s/${item.id}`}>
-                  <div className="flex flex-row md:flex-col flex-wrap sm:w-96 md:w-72">
+                  <div className="flex flex-row md:flex-col  sm:w-96 md:w-72">
                     <img
                       src={item.image}
                       alt={item.id}
@@ -89,7 +89,7 @@ export default function BodyFavoriteAndDone() {
                   </div>
                 </Link>
                 <div className="md:text-center flex flex-col justify-center w-1/4 md:m-auto md:pb-2">
-                  <div className="flex justify-center items-center my-3 mr-3">
+                  <div className="flex flex-col w-10 justify-center items-center my-3 mr-3 md:w-auto md:flex-row">
                     <button
                       type="button"
                       className="bg-transparent border-0"

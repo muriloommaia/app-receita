@@ -27,7 +27,7 @@ export default function ExploreFoodsOrDrinks() {
         <Header searchRender={ false } title={ ref.title } />
       </div>
       <div className="flex flex-col justify-center items-center h-96">
-        <Link to={ `${pathname}/ingredientes` }>
+        <Link to={ `${ref.url}/ingredientes` }>
           <button
             type="button"
             data-testid="explore-by-ingredient"

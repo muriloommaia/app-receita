@@ -20,14 +20,12 @@ export default function Main() {
       const data = await fetchApi(end, path);
       dispatch(changeData(data));
     }
-    console.log(pathname)
     fetchData(search, pathname);
   }, [search, dispatch, pathname]);
 
   useEffect(() => {
     async function fetchData(end, path) {
       const data = await fetchApi(end, path);
-      console.log(data)
       dispatch(changeCategories(data));
     }
     fetchData({

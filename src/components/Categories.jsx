@@ -1,14 +1,14 @@
 import React from 'react';
-import { Button, ButtonGroup as div } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeSearch } from '../store/searchSlice';
+import LoadingBook from './LoadingBook';
 
 function Categories() {
   const categories = useSelector((state) => state.data.categories);
   const selectedCategory = useSelector((state) => state.search.category.search);
   const dispatch = useDispatch();
 
-  if (!categories) return <p>Loading ...</p>;
+  if (!categories) return <LoadingBook />;
 
   const catValues = [{ strCategory: 'All' }, ...Object.values(categories)[0]];
   const HALF_CATEGORIES = 2;

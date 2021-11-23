@@ -26,7 +26,6 @@ export default function ButtonRecipe({ testBtn }) {
     const inProgressRecipes = JSON.parse(localStorage.getItem('inProgressRecipes'));
     const keyName = pathname.includes('comidas') ? 'meals' : 'cocktails';
     const ingredientsSaved = inProgressRecipes[keyName][pathname.split('/')[3]];
-    console.log(pathname.split('/')[3]);
     if (ingredientsSaved) {
       setText('Continuar');
     }
