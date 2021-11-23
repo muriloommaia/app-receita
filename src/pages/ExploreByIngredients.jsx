@@ -5,6 +5,7 @@ import fetchApi from '../services/fetchApi';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import IngredientsCard from '../components/IngredientsCard';
+import LoadingBook from '../components/LoadingBook';
 
 export default function ExploreByIngredients() {
   const [ingredients, setIngedients] = useState();
@@ -33,7 +34,7 @@ export default function ExploreByIngredients() {
     fetchData({ type: 'ingredients', ingredients: { ingredientsType: 'get' } }, pathname);
   }, [pathname]);
 
-  if (!ingredients) return null;
+  if (!ingredients) return <LoadingBook />;
 
   const ingredientsArray = Object.values(ingredients)[0];
 
