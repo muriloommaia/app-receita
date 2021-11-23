@@ -6,6 +6,7 @@ import HeaderDetails from '../components/Details/HeaderDetails';
 import Instructions from '../components/Details/Instructions';
 import InstructionsInProgress from '../components/Details/InstructionsInProgress';
 import Recomendations from '../components/Details/Recomendations';
+import LoadingBook from '../components/LoadingBook';
 import fetchApi from '../services/fetchApi';
 import { changeDetail } from '../store/detailSlice';
 import './css/recipeDetails.css';
@@ -39,13 +40,12 @@ export default function RecipeDetails(props) {
     }
     fetchData();
   }, [dispatch, id, pathname]);
-  if (!isFetching) return <div>Loading...</div>;
+  if (!isFetching) return <LoadingBook />;
   if (pathname.includes('progress')) {
     return (
       <div>
         <HeaderDetails />
         <div className="instructions bg-gray-50 rounded-t-3xl">
-          {/* <Instructions stepProgress="ingredient-step" progress /> */}
           <InstructionsInProgress />
         </div>
         <ButtonRecipe testBtn="finish" />

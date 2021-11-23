@@ -9,7 +9,7 @@ export default function MainCards() {
   const selectedCategory = useSelector((state) => state.search.category.search);
   const history = useHistory();
   const MAX_SHOW_RECIPES = 12;
-  if (!data) return <p>loading</p>;
+  if (!data) return null;
 
   const value = Object.values(data)[0];
   let path = window.location.pathname;
