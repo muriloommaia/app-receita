@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/app-receita/static/css/main.cb5c3cf4.chunk.css",
-    "main.js": "/app-receita/static/js/main.270c5897.chunk.js",
-    "main.js.map": "/app-receita/static/js/main.270c5897.chunk.js.map",
+    "main.js": "/app-receita/static/js/main.4d8b3e8b.chunk.js",
+    "main.js.map": "/app-receita/static/js/main.4d8b3e8b.chunk.js.map",
     "runtime-main.js": "/app-receita/static/js/runtime-main.ab93d327.js",
     "runtime-main.js.map": "/app-receita/static/js/runtime-main.ab93d327.js.map",
     "static/js/2.29850af0.chunk.js": "/app-receita/static/js/2.29850af0.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.ab93d327.js",
     "static/js/2.29850af0.chunk.js",
     "static/css/main.cb5c3cf4.chunk.css",
-    "static/js/main.270c5897.chunk.js"
+    "static/js/main.4d8b3e8b.chunk.js"
   ]
 }
