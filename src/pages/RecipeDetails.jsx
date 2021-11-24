@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import LoadingBook from '../components/LoadingBook';
 import fetchApi from '../services/fetchApi';
 import { changeDetail } from '../store/detailSlice';
+import { changeSearch } from '../store/searchSlice';
 import './css/recipeDetails.css';
 
 // pair programming Pedro  e Mu rilo
@@ -19,7 +20,9 @@ export default function RecipeDetails(props) {
   const { pathname } = window.location;
   const { match: { params: { id } } } = props;
   const dispatch = useDispatch();
-
+  useEffect(() => {
+   dispatch(changeSearch({ type: '', category: { search: '' } }));
+  }, []);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetchApi(

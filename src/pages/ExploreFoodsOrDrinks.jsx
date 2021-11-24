@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import fetchApi from '../services/fetchApi';
+import { changeSearch } from '../store/searchSlice';
 
 export default function ExploreFoodsOrDrinks() {
   const { pathname } = window.location;
   const history = useHistory();
+  const dispatch = useDispatch();
   let ref = null;
-
+  useEffect(() => {
+   dispatch(changeSearch({ type: '', category: { search: '' } }));
+  }, []);
   if (pathname.includes('comida')) {
     ref = { url: 'comidas', title: 'Explorar Comidas', strId: 'idMeal' };
   } else {

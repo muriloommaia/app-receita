@@ -12,7 +12,8 @@ export default function Footer() {
       <button
         type="button"
         className="bg-transparent border-0"
-        onClick={ () => history.push('/bebidas') }
+        onClick={ () => {history.push('/bebidas')
+        console.log(history)} }
       >
         <img
           src={ drinkIcon }

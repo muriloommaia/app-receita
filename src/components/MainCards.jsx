@@ -10,7 +10,7 @@ export default function MainCards() {
   const history = useHistory();
   const MAX_SHOW_RECIPES = 12;
   if (!data) return null;
-
+          
   const value = Object.values(data)[0];
   let path = window.location.pathname;
   let ref = null;
@@ -29,7 +29,8 @@ export default function MainCards() {
   }
 
   return (
-    value.length === 1 && !selectedCategory
+    value.length === 1 
+    // && !selectedCategory
       ? <Redirect push to={ `/${path}/${value[0][ref.strId]}` } />
       : (
         <div className="bg-tertiary flex flex-wrap justify-center px-1 md:px-3 md:justify-around transform hover:scale-100 transition duration-500 ease-in-out">

@@ -44,7 +44,7 @@ export default function Main() {
       dispatch(changeData(data));
     }
     fetchData(search, pathname);
-  }, [search, dispatch]);
+  }, [search]);
 
   useEffect(() => {
     async function fetchData(end, path) {
@@ -56,7 +56,6 @@ export default function Main() {
       category: { categoryType: 'get' },
     }, pathname);
   }, [dispatch, pathname]);
-
   return (
     <div className="h-full">
       <div className="">
