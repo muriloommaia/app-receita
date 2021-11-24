@@ -14,14 +14,37 @@ export default function Main() {
   const search = useSelector((state) => state.search);
   const { pathname } = window.location;
   const title = pathname.includes('comida') ? 'Comidas' : 'Bebidas';
-
+  const [searchCategory, setSearchCategory] = React.useState('');
+  console.log(search)
+  useEffect(() => {
+    async function fetchData(end, path) {
+      const data = await fetchApi(end, path);
+      dispatch(changeData(data));
+    }
+    fetchData({
+      "type": "",
+      "radio": {
+          "search": "",
+          "radioType": ""
+      },
+      "category": {
+          "search": "",
+          "categoryType": ""
+      },
+      "ingredients": {
+          "search": "",
+          "ingredientsType": ""
+      },
+      "area": "All"
+  }, pathname);
+  }, [pathname])
   useEffect(() => {
     async function fetchData(end, path) {
       const data = await fetchApi(end, path);
       dispatch(changeData(data));
     }
     fetchData(search, pathname);
-  }, [search, dispatch, pathname]);
+  }, [search, dispatch]);
 
   useEffect(() => {
     async function fetchData(end, path) {

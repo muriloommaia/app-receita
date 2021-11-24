@@ -9,7 +9,7 @@ export default function ExploreFoodsOrDrinks() {
   const history = useHistory();
   let ref = null;
 
-  if (pathname === '/explorar/comidas') {
+  if (pathname.includes('comida')) {
     ref = { url: 'comidas', title: 'Explorar Comidas', strId: 'idMeal' };
   } else {
     ref = { url: 'bebidas', title: 'Explorar Bebidas', strId: 'idDrink' };

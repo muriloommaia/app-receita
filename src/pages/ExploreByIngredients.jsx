@@ -35,7 +35,7 @@ export default function ExploreByIngredients() {
   }, [pathname]);
 
   if (!ingredients) return <LoadingBook />;
-
+  console.log(ingredients)
   const ingredientsArray = Object.values(ingredients)[0];
 
   return (
