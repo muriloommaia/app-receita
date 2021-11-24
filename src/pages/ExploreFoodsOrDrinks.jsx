@@ -38,7 +38,7 @@ export default function ExploreFoodsOrDrinks() {
           </button>
         </Link>
         {ref.url === 'comidas' && (
-          <Link to={ `${pathname}/area` }>
+          <Link to={ `${ref.url}/area` }>
             <button
               type="button"
               className={className}

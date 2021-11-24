@@ -6,6 +6,7 @@ import HeaderDetails from '../components/Details/HeaderDetails';
 import Instructions from '../components/Details/Instructions';
 import InstructionsInProgress from '../components/Details/InstructionsInProgress';
 import Recomendations from '../components/Details/Recomendations';
+import Footer from '../components/Footer';
 import LoadingBook from '../components/LoadingBook';
 import fetchApi from '../services/fetchApi';
 import { changeDetail } from '../store/detailSlice';
@@ -49,6 +50,7 @@ export default function RecipeDetails(props) {
           <InstructionsInProgress />
         </div>
         <ButtonRecipe testBtn="finish" />
+        <Footer />
       </div>
     );
   }
@@ -60,6 +62,7 @@ export default function RecipeDetails(props) {
         <Recomendations />
         <ButtonRecipe />
       </div>
+      <Footer />
     </div>
   );
 }
