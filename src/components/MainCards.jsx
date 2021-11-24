@@ -1,6 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, useHistory } from 'react-router';
+import fetchApi from '../services/fetchApi';
+import { changeData } from '../store/dataSlice';
 
 import '../styles/MainCard.css';
 
@@ -8,6 +10,7 @@ export default function MainCards() {
   const data = useSelector((state) => state.data.data);
   const selectedCategory = useSelector((state) => state.search.category.search);
   const history = useHistory();
+  const dispatch = useDispatch()
   const MAX_SHOW_RECIPES = 12;
   if (!data) return null;
           
@@ -22,10 +25,29 @@ export default function MainCards() {
     ref = { strTitle: 'strDrink', strThumb: 'strDrinkThumb', strId: 'idDrink' };
     path = 'bebidas';
   }
-
-  if (!value) {
-    return global
-      .alert('Sinto muito, não encontramos nenhuma receita para esses filtros.');
+  if (!value.length) {
+    global
+    .alert('Sinto muito, não encontramos nenhuma receita para esses filtros.');
+    async function fetchData(end, path) {
+      const response = await fetchApi(end, path);
+      dispatch(changeData(response));
+    }
+    fetchData({
+      "type": "",
+      "radio": {
+          "search": "",
+          "radioType": ""
+      },
+      "category": {
+          "search": "",
+          "categoryType": ""
+      },
+      "ingredients": {
+          "search": "",
+          "ingredientsType": ""
+      },
+      "area": "All"
+  }, path);
   }
 
   return (

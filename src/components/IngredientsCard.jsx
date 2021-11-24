@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card as div, CardGroup } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 

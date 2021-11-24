@@ -1,9 +1,12 @@
 export default async function fetchApi(toSearch, path) {
   path = path.includes('comida') ? 'meal' : 'cocktail';
+  const key = path.includes('meal') ? 'meals' : 'drinks';
   const fethEnd = async (end, search = '') => {
     try {
       const response = await fetch(`${end}${search}`);
       const data = await response.json();
+      console.log(key)
+      data[key] = data[key] ? data[key] : [];
       return data;
     } catch (error) {
       return error.mensage;

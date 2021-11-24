@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import StyleInputGen from '../pages/templates/StyleInputGen';
 import { changeSearch } from '../store/searchSlice';
@@ -31,9 +31,11 @@ export default function HeaderSearch() {
       type: 'radio',
       radio: { search, isClicked: true, radioType: inputRadio },
     }));
+    setSearch('');
   };
+
   return (
-    <div className="flex flex-col items-center transition duration-1000 ease-in-out mt-1 md:mt-4 transform">
+    <div className="flex flex-col items-center mt-1 md:mt-4">
       <div className="mb-2">
         <InputGen config={configInput} />
       </div>

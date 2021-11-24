@@ -15,7 +15,6 @@ export default function Main() {
   const { pathname } = window.location;
   const title = pathname.includes('comida') ? 'Comidas' : 'Bebidas';
   const [searchCategory, setSearchCategory] = React.useState('');
-  console.log(search)
   useEffect(() => {
     async function fetchData(end, path) {
       const data = await fetchApi(end, path);
@@ -41,6 +40,7 @@ export default function Main() {
   useEffect(() => {
     async function fetchData(end, path) {
       const data = await fetchApi(end, path);
+      console.log(data)
       dispatch(changeData(data));
     }
     fetchData(search, pathname);
