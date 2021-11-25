@@ -32,7 +32,7 @@ function LoadingBook() {
           <div>
             <span className="border-t-2 p-3 w-1 rounded-full border-gray-900 animate-spin" />
           </div>
-          <span>Loading...</span>
+          <span className="text-gray-900">Loading...</span>
         </div>
       </div>
     </div>

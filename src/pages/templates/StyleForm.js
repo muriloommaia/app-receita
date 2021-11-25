@@ -14,7 +14,7 @@ const StyleForm = styled.div.attrs({
     button {
       ${tw`bg-primary border text-gray-100 p-4 w-full rounded-full tracking-wide
       font-semibold focus:outline-none hover:bg-primary disabled:opacity-50
-      shadow-lg border-secondary border-2`}
+      shadow-lg border-tertiary border-2`}
     }
   }
 `

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import fetchApi from '../../services/fetchApi';
+import LoadingBook from '../LoadingBook';
 
 export default function Recomendations() {
   const { detail } = useSelector((state) => state);
@@ -36,7 +37,7 @@ export default function Recomendations() {
     };
     fetchData();
   }, [key, path]);
-  if (!isFetching) return <div>Loading...</div>;
+  if (!isFetching) return <LoadingBook />;
   return (
     <div className="pb-7">
       { strYoutube && (

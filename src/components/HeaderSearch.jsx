@@ -35,8 +35,8 @@ export default function HeaderSearch() {
   };
 
   return (
-    <div className="flex flex-col items-center mt-1 md:mt-4">
-      <div className="mb-2">
+    <div className="flex flex-col items-center mt-1 md:mt-4 ">
+      <div className="mb-2 text-icons">
         <InputGen config={configInput} />
       </div>
       <div className="flex">
@@ -55,7 +55,7 @@ export default function HeaderSearch() {
           type="button"
           onClick={handleClick}
           disabled={inputRadio === ''}
-          className="bg-primary disabled:opacity-50 border border-gray-900 px-3 py-1 m-2 rounded-md"
+          className="bg-tertiary disabled:opacity-50 border border-icons px-3 py-1 m-2 rounded-md"
           data-testid="exec-search-btn"
         >
           Buscar

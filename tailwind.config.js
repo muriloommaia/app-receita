@@ -24,10 +24,12 @@ module.exports = {
       }
     },
     colors: {
-      'primary': '#57837B',
-      'secondary': '#C9D8B6',
-      'tertiary': '#F1ECC3',
-      'quaternary': '#105652',
+      'primary': '#321313',
+      'secondary': '#A20A0A',
+      'tertiary': '#F2EAD3',
+      'quaternary': '#630000',
+      'quinary': '#F9F5F0',
+      'icons': '#e4e4e7',
       gray: colors.gray,
       'card': '#F6EEDF',
       yellow: colors.yellow,

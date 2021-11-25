@@ -73,10 +73,10 @@ export default function MainCards() {
                     className='rounded-md'
                     data-testid={ `${index}-card-img` }
                   />
-                  <div className="py-4">
+                  <div className="py-4 bg-quinary rounded-lg">
                     <h2
                       data-testid={ `${index}-card-name` }
-                      className=" font-sans md:font-serif text-2xl"
+                      className="   md:font-serif text-2xl "
                     >
                       { recipe[ref.strTitle] }
                     </h2>

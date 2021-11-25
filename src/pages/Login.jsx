@@ -56,7 +56,7 @@ export default function Login() {
           </div>
         </StyleForm>
       </div>
-      <div className="flex flex-col font-sans md:font-serif md:self-center items-center md:w-1/2 mb-5">
+      <div className="flex flex-col   md:font-serif md:self-center items-center md:w-1/2 mb-5">
         <p className="text-5xl md:text-6xl">App de Receitas</p>
         <div className=" border border-gray-900 w-1/2 mt-4 mb-2" />
         <p className="text-xl md:text-3xl italic">Descubra um novo mundo</p>

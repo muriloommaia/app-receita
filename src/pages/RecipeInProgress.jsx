@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import ButtonRecipe from '../components/Details/ButtonRecipe';
 import HeaderDetails from '../components/Details/HeaderDetails';
 import Instructions from '../components/Details/Instructions';
+import LoadingBook from '../components/LoadingBook';
 import fetchDetails from '../services/fetchDetails';
 import { changeDetail } from '../store/detailSlice';
 import './css/recipeDetails.css';
@@ -26,7 +27,7 @@ export default function RecipeInProgress(props) {
     };
     fetchData();
   }, [dispatch, id, pathname]);
-  if (!isFetching) return <div>Loading...</div>;
+  if (!isFetching) return <LoadingBook />;
   return (
     <div>
       <HeaderDetails />

@@ -30,7 +30,7 @@ export default function RecipesRender() {
                 <div className="py-4">
                   <p
                     data-testid={`${index}-card-name`}
-                    className=" font-sans md:font-serif text-2xl"
+                    className="   md:font-serif text-2xl"
                   >
                     {recipe.strMeal}
                   </p>

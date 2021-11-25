@@ -2,11 +2,11 @@ import styled from "styled-components"
 import tw from "twin.macro"
 
 const StyleInputGen = styled.div.attrs({
-  className: "flex",
+  className: "flex text-icons",
 })`
   & {
     span {
-      ${tw`text-sm font-bold text-gray-700 tracking-wide`}
+      ${tw`text-sm font-bold text-gray-700 tracking-wide text-icons`}
     }
     input {
       ${tw``}

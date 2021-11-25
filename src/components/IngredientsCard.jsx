@@ -48,7 +48,7 @@ function IngredientsCards({ value, base, CARD_SHOW, path }) {
                 <div className="flex w-full justify-center">
                   <p
                     data-testid={ `${index}-card-name` }
-                    className="mx-auto font-sans md:font-serif text-2xl"
+                    className="mx-auto   md:font-serif text-2xl"
                   >
                     { recipe[base.strTitle] }
                   </p>

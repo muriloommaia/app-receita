@@ -8,19 +8,20 @@ import '../styles/Footer.css';
 export default function Footer() {
   const history = useHistory();
   return (
-    <section className="footer bg-secondary" data-testid="footer">
+    <section className="footer bg-secondary bg-opacity-90" data-testid="footer">
       <button
         type="button"
         className="bg-transparent border-0"
         onClick={ () => {history.push('/bebidas')
         console.log(history)} }
       >
-        <img
+        {/* <img
           src={ drinkIcon }
           data-testid="drinks-bottom-btn"
           className='text-gray-50'
           alt="drinks-btn"
-        />
+        /> */}
+        <i className="fas fa-cocktail text-icons text-4xl"></i>
       </button>
 
       <button
@@ -28,11 +29,12 @@ export default function Footer() {
         className="bg-transparent border-0"
         onClick={ () => history.push('/explorar') }
       >
-        <img
+        {/* <img
           src={ exploreIcon }
           data-testid="explore-bottom-btn"
           alt="explore-btn"
-        />
+        /> */}
+        <i className="fas fa-globe text-icons text-4xl"></i>
       </button>
 
       <button
@@ -40,11 +42,12 @@ export default function Footer() {
         className="bg-transparent border-0"
         onClick={ () => history.push('/comidas') }
       >
-        <img
+        {/* <img
           src={ mealIcon }
           data-testid="food-bottom-btn"
           alt="food-btn"
-        />
+        /> */}
+        <i className="fas fa-utensils text-4xl text-icons"></i>
       </button>
 
     </section>

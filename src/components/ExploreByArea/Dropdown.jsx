@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeSearch } from '../../store/searchSlice';
+import LoadingBook from '../LoadingBook';
 
 export default function Dropdown() {
   const areas = useSelector((state) => state.data.area);
@@ -12,7 +13,7 @@ export default function Dropdown() {
   useEffect(() => {
     dispatch(changeSearch({ area: areaValue }));
   }, [areaValue, dispatch]);
-  if (!areas) return <div>Loading...</div>;
+  if (!areas) return <LoadingBook />;
   return (
     <div className="my-3 relative flex justify-center w-3/4 md:w-1/2 text-gray-700 mx-auto">
       <select
